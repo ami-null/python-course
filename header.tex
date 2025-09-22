@@ -1,0 +1,119 @@
+\usetheme{moloch}
+\molochset{block=fill}
+
+\usepackage{fontspec}
+\setsansfont[
+    UprightFont = Inter-Light,          % Use light as the normal font weight
+    BoldFont = Inter-SemiBold,           % Use semibold for \textbf
+    ItalicFont = Inter-LightItalic,      % Light italic for \textit
+    BoldItalicFont = Inter-SemiBoldItalic % Semibold italic for \textbf with \textit
+]{Inter}[RawFeature={+ss04, +ss03, +dlig, +tnum}]
+% Inter font stylistic sets:
+% ss01: alternate digits for 3, 4, 6, 8
+% ss02: for disambiguation (with zero) in places like "Ill" or "O0" etc
+% ss04: for disambiguation (without zero) in places like "Ill" etc
+% ss03: round comma, quation marks
+
+\usepackage{sourcecodepro}
+
+\usepackage{upquote}
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath}    % disable protrusion for tt fonts
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{unicode-math}
+\setmathfont{Erewhon Math}[Scale=1.14]
+
+\usepackage{hyperref}
+\pdfstringdefDisableCommands{\def\translate#1{#1}}
+\usepackage{bookmark}
+\usepackage{url}
+
+\usepackage{natbib}
+\usepackage{appendixnumberbeamer}
+\usepackage{enumerate}
+% \usepackage{enumitem}    % it is giving the error: TeX capacity exceeded
+% \usepackage{footnotehyper}
+\usepackage{graphicx}
+\usepackage{caption}
+% \usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{array}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup\let\pm\relax}c<{\egroup}@{}}
+% \newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}}% <--- removed @{}
+% https://tex.stackexchange.com/questions/567724/can-i-hide-a-table-column-with-the-s-type-from-siunitx
+% https://tex.stackexchange.com/questions/414143/hide-column-without-adding-whitespace-to-table
+
+\usepackage{minted}
+\renewcommand{\theFancyVerbLine}{\ttfamily{\small\oldstylenums{\arabic{FancyVerbLine}}}}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\hypersetup{
+    colorlinks=true,
+    linkcolor={mDarkTeal},    % this colour is defined by the moloch theme
+    filecolor={Maroon},
+    citecolor={airforceblue!120},
+    urlcolor={airforceblue},
+    pdfcreator={xelatex},
+    bookmarksopen=true,    % Expand bookmarks in the PDF
+    bookmarksnumbered=true % Include numbering in bookmarks
+}
+
+\bibliographystyle{apalike}
+
+\let\oldcite=\cite
+\renewcommand{\cite}[1]{\textcolor{airforceblue!120}{\oldcite{#1}}}
+\let\oldcitet=\citet
+\renewcommand{\citet}[1]{\textcolor{airforceblue!120}{\oldcitet{#1}}}
+\let\oldcitep=\citep
+\renewcommand{\citep}[1]{\textcolor{airforceblue!120}{\oldcitep{#1}}}
+
+
+% \setlength{\leftmargini}{0em}
+\setbeamercolor{page number in head/foot}{fg=gray}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{sections/subsections in toc}[circle]
+\setbeamertemplate{frametitle continuation}[from second][(cont.)]
+\setbeamercovered{transparent}
+\beamertemplatenavigationsymbolsempty
+
+
+\AtBeginSubsection[]{
+    {
+        \begin{frame}[noframenumbering, plain]
+            \subsectionpage
+        \end{frame}
+    }
+}
+
+
+\newcommand\Wider[2][4em]{%
+    \makebox[\linewidth][c]{%
+        \begin{minipage}{\dimexpr\textwidth+#1\relax}
+            % \raggedright#2
+            \centering#2
+        \end{minipage}%
+    }%
+}
+
+% \newenvironment{myitemize}{
+%     \begin{itemize}
+%         \vspace{1em}
+%         \setlength{\itemsep}{0.7\baselineskip}
+% }{
+%         \vspace{1em}
+%     \end{itemize}
+% }
+
+% \newenvironment{myenumerate}{
+%     \begin{enumerate}
+%         \vspace{1em}
+%         \setlength{\itemsep}{0.7\baselineskip}
+% }{
+%         \vspace{1em}
+%     \end{enumerate}
+% }

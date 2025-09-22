@@ -1,0 +1,15 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.snm
+*.synctex.gz
+*.synctex
+*.vrb
+*.toc
+*.xdv
+_minted/*
+*/_minted/
+.vscode/
+code-examples/*.exe
