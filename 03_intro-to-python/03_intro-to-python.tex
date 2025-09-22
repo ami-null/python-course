@@ -1,0 +1,227 @@
+% \documentclass[12pt, handout]{beamer}
+\documentclass[12pt, aspectratio=169]{beamer}
+
+\input{../header}
+
+
+\title{Introduction to Python}
+\author{Md. Aminul Islam Shazid}
+\date{}
+
+
+\begin{document}
+    {
+		\setbeamertemplate{footline}{}    % NO FOOTLINE FOR THESE TWO FRAMES
+		\addtocounter{framenumber}{-2}    % not counting the title page and the outline in frame numbers
+
+		\begin{frame}
+			\titlepage
+		\end{frame}
+
+		\begin{frame}{Outline}
+            \vfill
+			\tableofcontents[subsectionstyle=hide]
+            \vfill
+		\end{frame}
+	}
+
+    \section{Introduction and History}
+
+    \begin{frame}{What is Python?}
+        \begin{itemize}
+            \item High-level, interpreted, general-purpose programming language
+            \item Emphasizes readability and simplicity
+            \item Python philosophy: "Readability counts"
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{The Zen of Python}
+        \begin{itemize}
+            \item import this
+            \item Key principles:
+            \begin{itemize}
+                \item Beautiful is better than ugly
+                \item Simple is better than complex
+                \item Readability counts
+                \item There should be one-- and preferably only one --obvious way to do it
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    
+    \begin{frame}{History of Python}
+        \begin{itemize}
+            \item Created by Guido van Rossum, 1991
+            \item Influences: ABC, Modula-3, Unix shell scripting
+            \item Designed for scripting, prototyping, and general programming
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Original Goals and Evolution}
+        \begin{itemize}
+            \item Original goals: ease of use, readability, "batteries included"
+            \item Evolution:
+            \begin{itemize}
+                \item From scripting to web development, data science, AI
+                \item Strong ecosystem and community growth
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+
+    \section{Language Features}
+
+        \begin{frame}{Basic Language Features}
+        \begin{itemize}
+            \item Interpreted, dynamically typed
+            \item High-level, cross-platform
+            \item Large standard library
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Interpreters and Implementations}
+        \begin{itemize}
+            \item CPython (default, reference implementation)
+            \item PyPy (JIT compilation)
+            \item Cython, Numba (performance optimization)
+            \item MicroPython (embedded)
+            \item Jython (Java), IronPython (.NET)
+            \item Pyodide (CPython ported to WebAssembly), Brython (Python interpreter written in JavaScript)
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Interpreted vs Compiled}
+        \begin{itemize}
+            \item Interpreted: executes directly, easier debugging, slower
+            \item Compiled: precompiled to machine code, faster, less flexible
+            \item While Python is primarily an interpreted language, one can use both approaches via JIT or AOT compilers
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{High-Performance Compilers and Tools}
+        \begin{itemize}
+            \item PyPy, Cython, Numba for speed
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Interoperability with Other Languages}
+        \begin{itemize}
+            \item C, C++, Fortran extensions
+            \item Java (via Jython), R (via rpy2)
+            \item Integration for high-performance or legacy code
+        \end{itemize}
+    \end{frame}
+
+
+    \section{Programming Paradigms}
+
+    \begin{frame}{Object-Oriented Programming}
+        \begin{itemize}
+            \item Classes, inheritance, polymorphism
+            \item Encapsulation of data and behavior
+            \item Widely used in web frameworks, GUI apps, simulations
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Functional Programming}
+        \begin{itemize}
+            \item First-class functions
+            \item map(), filter(), reduce()
+            \item Comprehensions and generators
+        \end{itemize}
+    \end{frame}
+
+
+    \section{Why Learn Python?}
+
+    \begin{frame}{Why Learn Python in General?}
+        \begin{itemize}
+            \item Simplicity \& readability → low entry barrier
+            \item Versatility:
+            \begin{itemize}
+                \item Web development: Django, Flask
+                \item Backend \& APIs: FastAPI, Flask
+                \item Desktop applications: GUI apps, utilities
+                \item Mobile development: Kivy, BeeWare (smaller adoption)
+                \item Automation \& scripting: one-off scripts, data cleaning, DevOps
+            \end{itemize}
+            \item Community \& ecosystem → global adoption, extensive libraries
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Python in Action — Famous Apps \& Services}
+        \begin{itemize}
+            \item Web: Instagram, Pinterest, Reddit, Spotify, Netflix, YouTube, Quora
+            \item Desktop: Dropbox, BitTorrent, Calibre, Anki, Blender (Python scripting)
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Why Learn Python for Data Science?}
+        \begin{itemize}
+            \item Core libraries: NumPy, Pandas, Polars
+            \item ML/AI frameworks: Scikit-learn, TensorFlow, PyTorch
+            \item Visualization: Matplotlib, Seaborn, Plotly
+            \item Big Data \& cloud: PySpark, Dask
+            \item Dominant language for AI research and production
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Python vs Other Languages}
+        \begin{itemize}
+            \item Python vs C: simplicity vs raw performance
+            \item Python vs R: general-purpose vs domain-specific (statistics)
+            \item Complementary use cases; Python bridges prototyping \& production
+        \end{itemize}
+    \end{frame}
+
+
+    \section{Ecosystem and Applications}
+
+    \begin{frame}{PyPI and the Library Ecosystem}
+        \begin{itemize}
+            \item Over 500k packages available
+            \item Domains: web dev, scientific computing, ML/AI, automation
+            \item Easy to install and manage via pip
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Solving the Two-Language Problem}
+        \begin{itemize}
+            \item Rapid prototyping in Python
+            \item Production optimization via Cython, Numba, Rust, or C++ integration
+            \item Combines speed of compiled languages with ease of Python
+        \end{itemize}
+    \end{frame}
+
+
+    \section{Present and Future}
+
+    \begin{frame}{Current State of Python}
+        \begin{itemize}
+            \item Widespread adoption: academia, enterprise, startups
+            \item Strong ecosystem of libraries and tools
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Future Prospects and Innovation}
+        \begin{itemize}
+            \item Performance improvements: PEP 659 specialization, sub-interpreters
+            \item Rust integration, WebAssembly, cloud-native tools
+            \item Expansion into embedded and edge devices
+            \item Continued growth in AI, data science, and scientific computing
+        \end{itemize}
+    \end{frame}
+
+\end{document}
