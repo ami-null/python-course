@@ -37,22 +37,21 @@
 
 
     \begin{frame}{The Zen of Python}
+        Key principles:
         \begin{itemize}
-            \item import this
-            \item Key principles:
-            \begin{itemize}
-                \item Beautiful is better than ugly
-                \item Simple is better than complex
-                \item Readability counts
-                \item There should be one-- and preferably only one --obvious way to do it
-            \end{itemize}
+            \item Beautiful is better than ugly
+            \item Simple is better than complex
+            \item Readability counts
+            \item There should be one, and preferably only one, obvious way to do it
         \end{itemize}
+
+        Run \texttt{import this} to view all of it.
     \end{frame}
 
     
     \begin{frame}{History of Python}
         \begin{itemize}
-            \item Created by Guido van Rossum, 1991
+            \item Created by Guido van Rossum in 1991
             \item Influences: ABC, Modula-3, Unix shell scripting
             \item Designed for scripting, prototyping, and general programming
         \end{itemize}
@@ -61,7 +60,7 @@
 
     \begin{frame}{Original Goals and Evolution}
         \begin{itemize}
-            \item Original goals: ease of use, readability, "batteries included"
+            \item Original goals: ease of use, readability, ``batteries included"
             \item Evolution:
             \begin{itemize}
                 \item From scripting to web development, data science, AI
@@ -106,6 +105,8 @@
     \begin{frame}{High-Performance Compilers and Tools}
         \begin{itemize}
             \item PyPy, Cython, Numba for speed
+            \item GPU-accelerated workloads supported via Polars, cuDF, OneAPI, ROCm
+            \item Distributed computing via Dask, Ray, PySpark, Modin
         \end{itemize}
     \end{frame}
 
@@ -119,8 +120,6 @@
     \end{frame}
 
 
-    \section{Programming Paradigms}
-
     \begin{frame}{Object-Oriented Programming}
         \begin{itemize}
             \item Classes, inheritance, polymorphism
@@ -132,8 +131,8 @@
 
     \begin{frame}{Functional Programming}
         \begin{itemize}
-            \item First-class functions
-            \item map(), filter(), reduce()
+            \item Functions are treated as first-class objects
+            \item map(), filter(), reduce() and other higher order functions
             \item Comprehensions and generators
         \end{itemize}
     \end{frame}
@@ -141,7 +140,7 @@
 
     \section{Why Learn Python?}
 
-    \begin{frame}{Why Learn Python in General?}
+    \begin{frame}{Why Learn Python}
         \begin{itemize}
             \item Simplicity \& readability → low entry barrier
             \item Versatility:
@@ -176,22 +175,11 @@
     \end{frame}
 
 
-    \begin{frame}{Python vs Other Languages}
-        \begin{itemize}
-            \item Python vs C: simplicity vs raw performance
-            \item Python vs R: general-purpose vs domain-specific (statistics)
-            \item Complementary use cases; Python bridges prototyping \& production
-        \end{itemize}
-    \end{frame}
-
-
-    \section{Ecosystem and Applications}
-
     \begin{frame}{PyPI and the Library Ecosystem}
         \begin{itemize}
-            \item Over 500k packages available
+            \item Over 500k community made packages
             \item Domains: web dev, scientific computing, ML/AI, automation
-            \item Easy to install and manage via pip
+            \item Easy to install and manage via \texttt{pip} and other package managers
         \end{itemize}
     \end{frame}
 
@@ -205,22 +193,52 @@
     \end{frame}
 
 
-    \section{Present and Future}
-
     \begin{frame}{Current State of Python}
         \begin{itemize}
             \item Widespread adoption: academia, enterprise, startups
             \item Strong ecosystem of libraries and tools
+            \item Significant performance improvements in Python 3.13 as well as introduction of an experimental Just-In-Time (JIT) compiler
         \end{itemize}
     \end{frame}
 
 
     \begin{frame}{Future Prospects and Innovation}
         \begin{itemize}
-            \item Performance improvements: PEP 659 specialization, sub-interpreters
+            \item Continued performance improvements (Python 3.14+)
+            \item Wider adoption of GPU acceleration and distributed computing
             \item Rust integration, WebAssembly, cloud-native tools
             \item Expansion into embedded and edge devices
-            \item Continued growth in AI, data science, and scientific computing
+            \item Growth in AI, data science, scientific computing, and high-performance applications
+        \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}{Python vs Other Languages}
+        \begin{itemize}
+            \item Python vs C: simplicity vs raw performance
+            \item Python vs R: general-purpose vs domain-specific (statistics)
+            \item Complementary use cases; Python bridges prototyping \& production
+        \end{itemize}
+    \end{frame}
+
+
+    \section{Getting Started with Python}
+
+    \begin{frame}{Getting Started with Python}
+        \begin{itemize}
+            \item Easiest option: coding on Kaggle or Google Colab
+            \item To code on local machine:
+            \begin{itemize}
+                \item For Windows and MacOS, download Python from \href{https://www.python.org/}{python.org}
+                \item On most Linux distributions, Python is already installed
+                \item Once Python is installed, need an IDE
+                \begin{itemize}
+                    \item Recommended: VSCode with Python extension
+                    \item Other options include: PyCharm, Spyder
+                \end{itemize}
+            \end{itemize}
+
+            Another easy option is to code using \href{https://thonny.org/}{Thonny}, it is an IDE purpose built for begginers learning Python, comes with Python bundled.
         \end{itemize}
     \end{frame}
 
