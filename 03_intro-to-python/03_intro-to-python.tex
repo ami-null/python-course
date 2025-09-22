@@ -231,15 +231,43 @@
             \begin{itemize}
                 \item For Windows and MacOS, download Python from \href{https://www.python.org/}{python.org}
                 \item On most Linux distributions, Python is already installed
-                \item Once Python is installed, need an IDE
-                \begin{itemize}
-                    \item Recommended: VSCode with Python extension
-                    \item Other options include: PyCharm, Spyder
-                \end{itemize}
             \end{itemize}
-
-            Another easy option is to code using \href{https://thonny.org/}{Thonny}, it is an IDE purpose built for begginers learning Python, comes with Python bundled.
         \end{itemize}
+
+        When installing on Windows, make sure that Pip, TCL/Tk and ``add to PATH'' options are selected.
     \end{frame}
+
+    \begin{frame}{Installing an IDE}
+        Once Python is installed, need an IDE:
+        \begin{itemize}
+            \item Recommended: VSCode with Python extension
+            \item Other options include: PyCharm, Spyder
+        \end{itemize}
+
+        Another easy option is to code using \href{https://thonny.org/}{Thonny}, it is an IDE purpose-built for begginers learning Python, comes with Python bundled.
+    \end{frame}
+
+
+    \begin{frame}{Hello World in Python}
+        \inputminted[
+            frame=none,
+            bgcolor=gray!20,
+            linenos, 
+            breaklines=true,
+            fontsize=\fontsize{12pt}{13pt}\selectfont,
+        ]{python}{../code-examples/03_01_hello-world.py}
+
+        \vspace{2em}
+
+        \inputminted[
+            frame=none,
+            bgcolor=gray!20,
+            linenos, 
+            breaklines=true,
+            fontsize=\fontsize{12pt}{13pt}\selectfont,
+        ]{python}{../code-examples/03_02_greetings.py}
+    \end{frame}
+
+    \section*{Questions?}
 
 \end{document}
